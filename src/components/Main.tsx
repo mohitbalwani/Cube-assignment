@@ -66,12 +66,19 @@ const Main: React.FC = () => {
     customer.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const totalPages = Math.ceil(filteredCustomers.length / itemsPerPage);
-  const startIdx = (currentPage - 1) * itemsPerPage;
-  const selectedCustomers = filteredCustomers.slice(startIdx, startIdx + itemsPerPage);
+  let startIdx = (currentPage - 1) * itemsPerPage;
+  let selectedCustomers = filteredCustomers.slice(startIdx, startIdx + itemsPerPage);
 
   const handlePageChange = (newPage: number) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
+      if (newPage > currentPage) {
+        startIdx = (currentPage) * itemsPerPage;
+      } else {
+        startIdx = (currentPage - 2) * itemsPerPage;
+      }
+      selectedCustomers = filteredCustomers.slice(startIdx, startIdx + itemsPerPage);
+
       setSelectedCustomer(selectedCustomers[0] || null);
     }
   };
