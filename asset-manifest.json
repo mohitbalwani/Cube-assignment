@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Cube-assignment/static/css/main.163b014f.css",
-    "main.js": "/Cube-assignment/static/js/main.f1a81836.js",
+    "main.js": "/Cube-assignment/static/js/main.bb6d2adc.js",
     "static/js/453.798009a9.chunk.js": "/Cube-assignment/static/js/453.798009a9.chunk.js",
     "index.html": "/Cube-assignment/index.html",
     "main.163b014f.css.map": "/Cube-assignment/static/css/main.163b014f.css.map",
-    "main.f1a81836.js.map": "/Cube-assignment/static/js/main.f1a81836.js.map",
+    "main.bb6d2adc.js.map": "/Cube-assignment/static/js/main.bb6d2adc.js.map",
     "453.798009a9.chunk.js.map": "/Cube-assignment/static/js/453.798009a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.163b014f.css",
-    "static/js/main.f1a81836.js"
+    "static/js/main.bb6d2adc.js"
   ]
 }
