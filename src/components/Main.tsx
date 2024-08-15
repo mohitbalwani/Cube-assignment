@@ -40,11 +40,9 @@ const Main: React.FC = () => {
 
   const fetchPhotos = async () => {
     try {
-      const randomPage = Math.floor(Math.random() * 100) + 1;
+      const randomPage = Math.floor(Math.random() * 50) + 1;
       const PIXABAY_API_URL = `https://pixabay.com/api/?key=${PIXABAY_API_KEY}&per_page=9&page=${randomPage}`;
-      console.log('Fetching photos from URL:', PIXABAY_API_URL); // Log URL for debugging
       const response = await axios.get(PIXABAY_API_URL);
-      console.log('API Response:', response.data); // Log response for debugging
       const fetchedPhotos = response.data.hits.map((hit: any) => ({
         id: hit.id,
         url: hit.webformatURL,
